@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+ <definitions 
+ xmlns="http://schemas.xmlsoap.org/wsdl/" 
+ xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" 
+ xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+ xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" name="servicioTest" targetNamespace="http://WS/" xmlns:tns="http://WS/" 
+ >
+    <message name="hello"/>
+    <message name="helloResponse"/>
+    <message name="numero"/>
+    <message name="numeroResponse"/>
+    <portType name="servicioTest">
+        <operation name="hello">
+            <input message="tns:hello"/>
+            <output message="tns:helloResponse"/>
+        </operation>
+        <operation name="numero">
+            <input message="tns:numero"/>
+            <output message="tns:numeroResponse"/>
+        </operation>
+    </portType>
+    <binding name="servicioTestPortBinding" type="tns:servicioTest">
+        <operation name="hello">
+            <input/>
+            <output/>
+        </operation>
+        <operation name="numero">
+            <input/>
+            <output/>
+        </operation>
+    </binding>
+    <service name="servicioTest">
+        <port name="servicioTestPort" binding="tns:servicioTestPortBinding"/>
+    </service>
+</definitions>
